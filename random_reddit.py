@@ -13,11 +13,14 @@ def generator():
         print(base36.dumps(random_number))
         i += 1
 
-processes = []
-for i in range(process_count):
-    process = multiprocessing.Process(target=generator)
-    processes.append(process)
-    process.start()
+if (input(str(loop_count*process_count) + ' random post ids will be generated. Do you need to continue?(y/n)')) == 'y':
+    processes = []
+    for i in range(process_count):
+        process = multiprocessing.Process(target=generator)
+        processes.append(process)
+        process.start()
 
-for proc in processes:
-    proc.join()
+    for proc in processes:
+        proc.join()
+else:
+    pass
