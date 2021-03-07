@@ -4,7 +4,7 @@ import requests
 import multiprocessing
 
 process_count = int(input('how many processes do you need to run(its recommended to not going above 300):'))
-loop_count = int(input('how many post ids do you need to generate per process:'))
+loop_count = int(input('how many post ids do you need to generate per process(its recommended to not going above 5):'))
 
 def generator():
     i = 0
