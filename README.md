@@ -1,4 +1,4 @@
-# A program picks up random posts from reddit
+# A script picks up random posts from reddit
 The only required library is base36 install it using `pip install base36` and you are ready
 
 If you see a page that says "Whoa There Partner" it means you runned it too long or too many times and you need to wait a few minutes before running code again.
