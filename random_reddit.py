@@ -2,22 +2,16 @@ import random
 import base36
 import requests
 import multiprocessing
-from os import environ
 
 process_count = int(input('how many processes do you need to run(its recommended to not going above 300):'))
 loop_count = int(input('how many post ids do you need to generate per process:'))
-subreddit = input("Subreddit filter (leave blank if you don't need to filter by subreddit, TYPE NAME OF SUB WITHOUT r/ SECTION!):")
-if subreddit == '':
-    pass
-else:
-    subreddit = 'r/'+ subreddit +'/comments/'
 
 def generator():
     i = 0
     while i < loop_count:
         random.seed(random.randint(1,900000))
         random_number = random.randint(100000000,999999999)
-        url = 'https://reddit.com/'+ subreddit +str(base36.dumps(random_number))
+        url = 'https://reddit.com/'+str(base36.dumps(random_number))
         req = requests.get(url)
         if (str(req) == '<Response [429]>'):
             print(url)
