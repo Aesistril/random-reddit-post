@@ -29,3 +29,6 @@ if (input(str(loop_count*process_count) + ' random post ids will be generated an
     print(str(loop_count*process_count) + ' random post ids checked. Found these posts. If you see a page says Whoa There Partner, It means you need to wait a few minutes before running the code')
 else:
     pass
+
+while True:
+    input()
