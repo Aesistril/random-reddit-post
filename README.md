@@ -1,5 +1,10 @@
 # A script picks up random posts from reddit
-The only required library is base36 install it using `pip install base36` and you are ready
+
+## Linux
+The only required library is base36 install it using `pip3 install base36` and you are ready. Now you can run code with `python3 random_reddit.py`
+
+## Windows
+Download exe and run it
 
 If you see a page that says "Whoa There Partner" after you oppened link it means you runned it too long or too many times and you need to wait a few minutes before running code again.
 
